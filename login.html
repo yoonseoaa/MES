@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MES Soultion U</title>
+    <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <link rel="stylesheet" href="login.css" type="text/css">
+</head>
+<body>
+    <div id="login">
+    <!--<h2>(주)유니컴퍼니 MES</h2>-->
+    <section class="login-form">
+        <img src="img/찐로고.png" width="90%" height="130px"/>
+        <form action="">
+            <div class="int-area">
+                <input type="text" name="id" id="id" autocomplete="off" required>
+                <label for="id">아이디를 입력해주세요</label>
+            </div>
+            <div class="int-area">
+                <input type="password" name="pw" id="pw" autocomplete="off" required>
+                <label for="pw">비밀번호를 입력해주세요</label>
+            </div>
+            <div class="btn-area">
+                <button id="" type="submit">로그인</button>
+            </div>
+        </form>
+        <div class="btn-area2">
+            <button id="" type="submit">회원가입</button>
+        </div>
+        <div class="caption">
+            <a href="">계정을 잃어버리셨나요?</a>
+        </div>
+    </section>    
+</div>
+    <script>
+        let id=$('#id'); 
+        let pw=$('#pw');
+        let btn=$('#btn');
+
+        $(btn).on('click', function() {
+            if($(id).val() == "") {
+                $(id).next('label').addClass('warning');
+                setTimeout(function(){
+                    $('label').removeClass('warning')
+                },1500);
+            }
+            else if($(pw).val() == "") {
+                $(pw).next('label').addClass('warning');
+                setTimeout(function(){
+                    $('label').removeClass('warning')
+                },1500);
+            }
+        });
+    </script>
+</div>
+</body>
+</html>
